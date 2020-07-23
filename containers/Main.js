@@ -19,8 +19,8 @@ const Main = () => {
 
   React.useEffect(() => {
     const initalList = [
-      { key: "0", desc: "Learn React Native", complete: false },
-      { key: "1", desc: "Make Lunch", complete: true },
+      { key: "0", desc: "Learn React Native", complete: true },
+      { key: "1", desc: "Create Git Repository", complete: false },
     ];
     setTodos(initalList);
     setFilteredTodos(initalList);
@@ -87,6 +87,7 @@ const Main = () => {
           <List.Item
             key={item.key}
             title={item.desc}
+            titleNumberOfLines={2}
             titleStyle={
               item.complete ? { textDecorationLine: "line-through" } : {}
             }
